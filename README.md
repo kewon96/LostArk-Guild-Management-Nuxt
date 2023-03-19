@@ -1,42 +1,9 @@
-# Nuxt 3 Minimal Starter
+# LostArk Guild Management Nuxt-Project
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 실행
+1. package.json있는 Directory위치에 npm install 실행
+2. 이후 pinia-vue간의 버전 이슈로 인해 npm i pinia -f 실행
+3. 서버실행 `npm run dev`
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### Icon
+heroicons https://heroicons.com/
