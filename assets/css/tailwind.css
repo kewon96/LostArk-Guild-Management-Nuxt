@@ -9,7 +9,12 @@ body {
 
 @layer components {
     .btn {
-        @apply bg-[#13b488] text-white px-3 py-2 rounded-md text-sm;
+        @apply bg-[#ff5000] text-white px-3 py-2 rounded-md text-sm;
+    }
+
+    .input-text {
+        @apply relative block w-full border-0 pl-3 border-[#e6e8ec]
+
     }
 
     .card {

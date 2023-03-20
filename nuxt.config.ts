@@ -7,9 +7,22 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
     ],
 
-    build: {
-        transpile: ['vuetify'],
-    },
+
+    css: ["assets/styles/main.sass"],
+    // vite: {
+    //     css: {
+    //         preprocessorOptions: {
+    //             scss: {
+    //                 autoImports: 'assets/styles/main.sass'
+    //                 // additionalData: '@import "@/assets/styles/_variables.scss";',
+    //             },
+    //         },
+    //     },
+    // },
+
+    // build: {
+    //     transpile: ['@heroicons/vue']
+    // },
 
     buildModules: [
         'vuetify',
