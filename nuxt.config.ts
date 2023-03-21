@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
 
     modules: [
@@ -7,33 +6,31 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
     ],
 
-
-    css: ["assets/styles/main.sass"],
-    // vite: {
-    //     css: {
-    //         preprocessorOptions: {
-    //             scss: {
-    //                 autoImports: 'assets/styles/main.sass'
-    //                 // additionalData: '@import "@/assets/styles/_variables.scss";',
-    //             },
-    //         },
-    //     },
+    // styleResources: {
+    //     scss: [
+    //         '@/assets/scss/tailwind.scss',
+    //         '@/assets/styles/main.scss',
+    //         '@/assets/styles/main.sass',
+    //     ],
     // },
-
-    // build: {
-    //     transpile: ['@heroicons/vue']
-    // },
+    //
+    // css: [
+    //     '@/assets/styles/main.scss',
+    //     '@/assets/scss/tailwind.scss',
+    //     '@/assets/styles/main.sass',
+    // ],
 
     buildModules: [
-        'vuetify',
-        '@nuxtjs/vuetify',
+        '@nuxtjs/style-resources',
+        '@nuxtjs/svg',
     ],
 
     app: {
         head: {
             title: 'Lok-Guild',
             meta: [
-                { name: 'description', content: '로스트아크 길드 관리', }
+                { name: 'description', content: '로스트아크 길드 관리', },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' }
             ],
             link: [
                 { rel: "stylesheet", href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
@@ -57,4 +54,9 @@ export default defineNuxtConfig({
     pinia: {
         autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
     },
+
+    devServer: {
+        url: "http://localhost:5050",
+        port: 5050,
+    }
 })

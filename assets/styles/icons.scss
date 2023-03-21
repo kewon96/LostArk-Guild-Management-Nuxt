@@ -1,6 +1,11 @@
-.icon
-  display: block
+.icon {
+  display: block;
 
-  &--check-outline
+  &--check-outline {
     background-image: url("./public/icons/check-outline.svg")
+  }
+
+}
+
+
 
