@@ -8,7 +8,7 @@
             <LokInput type="password" :id="'password'" placeholder="비밀번호" name="password" />
           </div>
           <div class="keep-up-login">
-            <LokIcon icon-name="check-outline"></LokIcon>
+            <LokIcon icon-name="check-outline" class="w-5 h-5"></LokIcon>
           </div>
           <div>
             <button type="submit" class="btn w-full">로그인</button>

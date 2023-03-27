@@ -1,6 +1,6 @@
 <template>
   <div>
-    <i :class="`icon--${iconName}`"></i>
+    <i :class="`icon--${iconName} w-full h-full block`"></i>
   </div>
 </template>
 

@@ -3,13 +3,13 @@
 @tailwind utilities;
 @tailwind form;
 
-body {
-    @apply bg-gray-50;
-}
+/*body {*/
+/*    @apply bg-gray-50;*/
+/*}*/
 
-a {
-    @apply text-[#ff5000] font-medium text-[14px]
-}
+/*a {*/
+/*    @apply text-[#ff5000] font-medium text-[14px]*/
+/*}*/
 
 @layer components {
     .btn {

@@ -6,23 +6,26 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
     ],
 
-    // styleResources: {
-    //     scss: [
-    //         '@/assets/scss/tailwind.scss',
-    //         '@/assets/styles/main.scss',
-    //         '@/assets/styles/main.sass',
-    //     ],
-    // },
-    //
-    // css: [
-    //     '@/assets/styles/main.scss',
-    //     '@/assets/scss/tailwind.scss',
-    //     '@/assets/styles/main.sass',
-    // ],
-
     buildModules: [
         '@nuxtjs/style-resources',
         '@nuxtjs/svg',
+    ],
+
+    /** Mixin같은 style변수를 .vue에서 전역으로 사용할 수 있게 설정 */
+    styleResources: {
+        sass: [
+            '@/assets/styles/mixins/mixins.sass',
+            '@/assets/styles/**/*.sass',
+        ]
+    },
+
+    /** global import Style Sheet */
+    css: [
+        // '@/assets/styles/mixins/mixins.sass',
+        //
+        // '@/assets/styles/commons/lok-icon.sass',
+        // '@/assets/styles/commons/lok-link.sass',
+        '@/assets/styles/main.sass',
     ],
 
     app: {
