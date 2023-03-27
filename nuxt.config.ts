@@ -4,7 +4,16 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
+        '@nuxt/devtools',
     ],
+
+    devtools: {
+        // Enable devtools (default: true)
+        enabled: true,
+        // VS Code Server options
+        vscode: {},
+        // ...other options
+    },
 
     buildModules: [
         '@nuxtjs/style-resources',
@@ -41,6 +50,7 @@ export default defineNuxtConfig({
         }
     },
 
+    /**  */
     imports: {
         dirs: [
             './stores',
