@@ -2,30 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind form;
-
-/*body {*/
-/*    @apply bg-gray-50;*/
-/*}*/
-
-/*a {*/
-/*    @apply text-[#ff5000] font-medium text-[14px]*/
-/*}*/
-
-@layer components {
-    .btn {
-        @apply bg-[#ff5000] text-white px-3 py-2 rounded-md text-sm;
-    }
-
-    /*#e6e8ec*/
-    .input-text {
-        @apply outline-none relative block w-full border-0 ring-2 pl-3 rounded-md py-2 text-gray-900 ring-[#e6e8ec] ring-inset
-    }
-
-    .input-text:focus {
-        @apply ring-2 ring-[#ff5000]
-    }
-
-    .card {
-        @apply p-3 rounded-md bg-white shadow-md h-full
-    }
-}

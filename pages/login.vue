@@ -14,8 +14,8 @@
             <button type="submit" class="btn w-full">로그인</button>
           </div>
           <div class="flex justify-between">
-            <NuxtLink to="/registor">회원가입</NuxtLink>
-            <NuxtLink to="/find/password">비밀번호 찾기</NuxtLink>
+            <LokLink to="/registor" context="회원가입" />
+            <LokLink to="/find/password" context="비밀번호 찾기" />
           </div>
         </div>
       </form>
