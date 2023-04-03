@@ -22,18 +22,11 @@ export default defineNuxtConfig({
 
     /** Mixin같은 style변수를 .vue에서 전역으로 사용할 수 있게 설정 */
     styleResources: {
-        sass: [
-            '@/assets/styles/mixins/mixins.sass',
-            '@/assets/styles/**/*.sass',
-        ]
+        sass: './assets/styles/mixins/_mixins.sass'
     },
 
     /** global import Style Sheet */
     css: [
-        // '@/assets/styles/mixins/mixins.sass',
-        //
-        // '@/assets/styles/commons/lok-icon.sass',
-        // '@/assets/styles/commons/lok-link.sass',
         '@/assets/styles/main.sass',
     ],
 
