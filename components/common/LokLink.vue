@@ -12,10 +12,5 @@ defineProps<{
 </script>
 
 <style scoped lang="sass">
-@import "@/assets/styles/mixins/mixins.sass"
-
-a
-  color: $primary-color
-
 
 </style>
