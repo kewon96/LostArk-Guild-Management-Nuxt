@@ -11,7 +11,7 @@
             <LokIcon icon-name="check-outline" class="w-5 h-5"></LokIcon>
           </div>
           <div>
-            <button type="submit" class="btn w-full">로그인</button>
+            <LokButton type="submit" class="stripe w-full">로그인</LokButton>
           </div>
           <div class="flex justify-between">
             <LokLink to="/registor" context="회원가입" />
