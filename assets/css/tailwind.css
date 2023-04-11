@@ -1,18 +1,4 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-@tailwind form;
-
-body {
-    @apply bg-gray-50;
-}
-
-@layer components {
-    .btn {
-        @apply bg-[#13b488] text-white px-3 py-2 rounded-md text-sm;
-    }
-
-    .card {
-        @apply p-3 rounded-md bg-white shadow-md h-full
-    }
-}
+/*@tailwind utilities;*/
+/*@tailwind form;*/
