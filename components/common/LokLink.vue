@@ -1,21 +1,16 @@
 <template>
-  <NuxtLink :to="href">{{ context }}</NuxtLink>
+  <NuxtLink :to="to">{{ context }}</NuxtLink>
 </template>
 
 <script setup lang="ts">
 
 defineProps<{
-  href: string,
+  to: string,
   context: string
 }>()
 
 </script>
 
 <style scoped lang="sass">
-
-.router-link-exact-active
-  color: #12b488
-
-
 
 </style>

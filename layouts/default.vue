@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="shadow-sm bg-white">
+    <header class="shadow-sm bg-white border-solid border-2 border-b-[#9C9EA0]">
       <nav class="container mx-auto p-4 flex justify-between">
         <NuxtLink to="/" class="font-bold">Lok Guild</NuxtLink>
         <ul class="flex gap-4">
@@ -12,7 +12,7 @@
     </header>
 
     <!-- output the page content -->
-    <div class="container mx-auto p-4 min-w-full">
+    <div class="flex min-h-full items-center justify-center py-44 px-4 sm:px-6 lg:px-8 container mx-auto p-4 min-w-full">
       <slot />
     </div>
   </div>

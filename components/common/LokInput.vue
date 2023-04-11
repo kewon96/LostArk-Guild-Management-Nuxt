@@ -4,7 +4,6 @@
     <input :id="id"
            name="email"
            v-bind="$attrs"
-           class="input-text"
            autocomplete="email" required="" :placeholder="$attrs.placeholder" />
   </div>
 </template>
@@ -19,13 +18,13 @@
 
 /*********** Reactive Instance **************/
 
+defineProps<{
+    id: string,
+    label?: string
+}>()
 
 /*********** Hook **************/
 
-defineProps<{
-  id: string,
-  label?: string
-}>()
 
 /*********** Function **************/
 
@@ -35,9 +34,13 @@ defineProps<{
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
 
-
+div
+  input
+    @apply outline-none relative block w-full border-0 ring-2 pl-3 rounded-md py-2 text-gray-900 ring-[#e6e8ec] ring-inset
+  &:focus
+    @apply ring-2 ring-[$primary-color]
 
 
 </style>

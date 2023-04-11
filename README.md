@@ -7,3 +7,6 @@
 
 ### Icon
 heroicons https://heroicons.com/
+
+### DevTool
+Nuxt Devtool https://github.com/nuxt/devtools

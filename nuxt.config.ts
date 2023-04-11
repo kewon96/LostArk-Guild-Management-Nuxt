@@ -4,25 +4,30 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
+        '@nuxt/devtools',
     ],
 
-    // styleResources: {
-    //     scss: [
-    //         '@/assets/scss/tailwind.scss',
-    //         '@/assets/styles/main.scss',
-    //         '@/assets/styles/main.sass',
-    //     ],
-    // },
-    //
-    // css: [
-    //     '@/assets/styles/main.scss',
-    //     '@/assets/scss/tailwind.scss',
-    //     '@/assets/styles/main.sass',
-    // ],
+    devtools: {
+        // Enable devtools (default: true)
+        enabled: true,
+        // VS Code Server options
+        vscode: {},
+        // ...other options
+    },
 
     buildModules: [
         '@nuxtjs/style-resources',
         '@nuxtjs/svg',
+    ],
+
+    /** Mixin같은 style변수를 .vue에서 전역으로 사용할 수 있게 설정 */
+    styleResources: {
+        sass: './assets/styles/mixins/_mixins.sass'
+    },
+
+    /** global import Style Sheet */
+    css: [
+        '@/assets/styles/main.sass',
     ],
 
     app: {
@@ -38,6 +43,7 @@ export default defineNuxtConfig({
         }
     },
 
+    /**  */
     imports: {
         dirs: [
             './stores',
