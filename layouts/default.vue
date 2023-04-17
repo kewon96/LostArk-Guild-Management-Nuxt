@@ -8,6 +8,9 @@
           <li><NuxtLink to="/about">About</NuxtLink></li>
           <li><NuxtLink to="/products" class="btn">Products</NuxtLink></li>
         </ul>
+        <div class="user-info-area">
+            <NuxtLink to="/auth/login" class="font-bold">로그인</NuxtLink>
+        </div>
       </nav>
     </header>
 
@@ -36,9 +39,3 @@
 
 
 </script>
-
-<style scoped>
-  .router-link-exact-active {
-    color: #12b488;
-  }
-</style>
