@@ -2,7 +2,7 @@
     <div class="w-5/12">
         <form action="" method="post">
             <div class="grid gap-y-5">
-                <div class="grid gap-y-2">
+                <div class="grid gap-y-5">
                     <LokInput type="email" :id="'email'" placeholder="이메일" name="email"/>
                     <LokInput type="password" :id="'password'" placeholder="비밀번호" name="password"/>
                 </div>
@@ -38,3 +38,17 @@
 /******** Functions **********/
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
