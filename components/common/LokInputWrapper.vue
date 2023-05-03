@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-row">
-        <LokInput :type="type" :id="id" placeholder="이메일"/>
-        <LokButton class="stripe input-merge">인증</LokButton>
+    <div class="lok-input-wrapper">
+        <LokInput class="w-3/4" :type="type" :id="id" placeholder="이메일"/>
+        <LokButton class="stripe input-merge w-1/4">인증</LokButton>
     </div>
 </template>
 

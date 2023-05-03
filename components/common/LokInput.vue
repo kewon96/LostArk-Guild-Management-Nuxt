@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="lok-input">
     <label :for="id" class="sr-only">{{ $attrs.placeholder }}</label>
     <input :id="id"
            name="email"
@@ -33,16 +33,4 @@ defineProps<{
 
 
 </script>
-
-<style lang="sass" scoped>
-
-div
-  input
-    @apply outline-none relative block w-full border-0 ring-2 pl-3 rounded-md py-2 text-gray-900 ring-[#e6e8ec] ring-inset
-  &:focus
-    @apply ring-2 ring-[$primary-color]
-
-
-</style>
-
 
