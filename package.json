@@ -20,6 +20,10 @@
     "@heroicons/vue": "^2.0.16",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "@pinia/nuxt": "^0.4.7",
-    "pinia": "^2.0.33"
+    "consola": "^3.1.0",
+    "pinia": "^2.0.36"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
