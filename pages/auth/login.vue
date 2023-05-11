@@ -34,6 +34,9 @@
 
 /******** Hooks **********/
 
+definePageMeta({
+    layout: 'auth-area',
+})
 
 /******** Functions **********/
 
