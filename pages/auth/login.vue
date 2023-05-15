@@ -1,6 +1,6 @@
 <template>
-    <div class="w-5/12">
-        <form action="" method="post">
+    <div class="login-area">
+        <form action="" method="post" class="w-9/12">
             <div class="grid gap-y-5">
                 <div class="grid gap-y-5">
                     <LokInput type="email" :id="'email'" placeholder="이메일" name="email"/>
@@ -10,7 +10,7 @@
                     <LokIcon icon-name="check-outline" class="w-5 h-5"></LokIcon>
                 </div>
                 <div>
-                    <LokButton type="submit" class="stripe w-full">로그인</LokButton>
+                    <LokButton type="submit" class="solid w-full">로그인</LokButton>
                 </div>
                 <div class="flex justify-between">
                     <LokLink to="/auth/registor" context="회원가입"/>
@@ -41,6 +41,14 @@ definePageMeta({
 /******** Functions **********/
 
 </script>
+
+<style lang="sass" scoped>
+.login-area
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+</style>
 
 
 
