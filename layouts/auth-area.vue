@@ -1,10 +1,17 @@
 <script setup lang="ts">
+  const title = computed(() => {
+    const { path } = useRoute();
 
+    switch (path) {
+      case '/auth/register': return '회원가입';
+      case '/auth/login': return '로그인';
+    }
+  })
 </script>
 
 <template>
     <main>
-        <header>로그인</header>
+        <header>{{ title }}</header>
         <section>
             <slot/>
         </section>
