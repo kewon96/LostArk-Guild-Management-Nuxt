@@ -1,7 +1,7 @@
 <template>
   <div class="lok-input">
-    <label :for="id" class="sr-only">{{ $attrs.placeholder }}</label>
-    <input :id="id"
+    <label  class="sr-only">{{ $attrs.placeholder }}</label>
+    <input
            name="email"
            v-bind="$attrs"
            autocomplete="email" required="" :placeholder="$attrs.placeholder" />
@@ -19,7 +19,6 @@
 /*********** Reactive Instance **************/
 
 defineProps<{
-    id: string,
     label?: string
 }>()
 
