@@ -27,13 +27,15 @@ const isLoginPage = computed<boolean>(() => useRoute().path.includes('login'));
 
 // 상단에 보여지는 제목
 const title = computed(() => {
-  const {path} = useRoute();
+  const { path } = useRoute();
 
   switch (path) {
     case '/auth/register-information':
       return '기본정보 입력하기';
     case '/auth/login':
       return '로그인';
+    case '/auth/register-search-character':
+      return '캐릭터 검색';
   }
 })
 

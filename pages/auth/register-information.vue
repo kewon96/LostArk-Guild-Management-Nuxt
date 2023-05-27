@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div class="register-information">
     <div class="information-area w-9/12">
       <LokInput type="email"    placeholder="이메일" name="email"/>
       <LokInput type="text"     placeholder="인증번호" name="password"/>
@@ -7,7 +7,7 @@
       <LokInput type="password" placeholder="비밀번호 확인" name="password"/>
     </div>
     <div class="next-step w-9/12">
-      <LokButton type="submit" class="solid w-full">다음단계</LokButton>
+      <LokLink to="/auth/register-search-character" class="btn" context="다음단계" />
     </div>
   </div>
 </template>
@@ -38,7 +38,7 @@ definePageMeta({
 </script>
 
 <style lang="sass" scoped>
-  .register
+  .register-information
     display: flex
     flex-direction: column
     row-gap: 10vh
@@ -47,7 +47,11 @@ definePageMeta({
     height: 40vh
 
     .next-step
+      display: flex
       height: 40px
+      a
+        width: 100%
+
 
   .information-area
     display: grid
