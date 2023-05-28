@@ -1,8 +1,8 @@
 <template>
   <div class="register-information">
     <div class="information-area w-9/12">
-      <LokInputWrapper type="email" placeholder="이메일" btn-context="전송" />
-      <LokInputWrapper type="text" placeholder="인증번호" btn-context="확인" />
+      <LokInputWrapper type="email" placeholder="이메일" btn-context="전송" :btn-click="foo" />
+      <LokInputWrapper type="text" placeholder="인증번호" btn-context="확인" :btn-click="foo" />
       <LokInput type="password" placeholder="비밀번호" name="password"/>
       <LokInput type="password" placeholder="비밀번호 확인" name="password"/>
     </div>
@@ -33,6 +33,7 @@ definePageMeta({
 
 /******** Functions **********/
 
+const foo = () => {}
 
 
 </script>
