@@ -1,8 +1,7 @@
 <template>
   <div class="register-search-character">
     <div class="character-area w-9/12">
-      <LokInput type="text" class="w-4/5" placeholder="캐릭터명" />
-      <LokButton>검색</LokButton>
+      <LokInputWrapper placeholder="캐릭터명" btn-context="검색" :btn-click="foo" />
     </div>
   </div>
 </template>
@@ -27,6 +26,9 @@ definePageMeta({
 
 /******** Functions **********/
 
+const foo = () => {
+  console.log(3)
+}
 
 
 </script>
@@ -39,9 +41,5 @@ definePageMeta({
   justify-content: flex-start
   align-items: center
   height: 40vh
-
-  .character-area
-    display: flex
-
 
 </style>

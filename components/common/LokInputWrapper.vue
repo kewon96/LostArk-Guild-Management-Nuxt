@@ -1,12 +1,11 @@
 <template>
     <div class="lok-input-wrapper">
-        <LokInput class="w-3/4" :type="type" :id="id" placeholder="이메일"/>
-        <LokButton class="stripe input-merge w-1/4">인증</LokButton>
+        <LokInput class="w-4/5" :type="type" :placeholder="placeholder" />
+        <LokButton class="w-1/5" @click="btnClick">{{ btnContext }}</LokButton>
     </div>
 </template>
 
 <script lang="ts" setup>
-
 
 /******** Type & Interface **********/
 
@@ -17,8 +16,10 @@
 /******** Reactive Instance **********/
 
 defineProps<{
-    type: string,
-    id: string,
+  type?: string,
+  placeholder: string,
+  btnContext: string,
+  btnClick?: Function
 }>()
 
 /******** Hooks **********/
@@ -29,6 +30,9 @@ defineProps<{
 
 </script>
 
-<style scoped>
+<style lang="sass" scoped>
+
+.lok-input-wrapper
+  display: flex
 
 </style>
