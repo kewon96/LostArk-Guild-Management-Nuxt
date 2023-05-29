@@ -14,6 +14,7 @@ export default defineNuxtConfig({
         // ...other options
     },
 
+    // @ts-ignore
     buildModules: [
         '@nuxtjs/style-resources',
         '@nuxtjs/svg',
