@@ -33,7 +33,7 @@
     width: 25vw
     height: 80vh
     min-width: 450px
-    min-height: 550px
+    min-height: 640px
     left: 50%
     top: 50%
     transform: translate(-50%, 15%)

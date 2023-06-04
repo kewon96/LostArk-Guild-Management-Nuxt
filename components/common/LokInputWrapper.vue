@@ -1,7 +1,7 @@
 <template>
     <div class="lok-input-wrapper">
-        <LokInput class="w-4/5" :type="type" :placeholder="placeholder" />
-        <LokButton class="w-1/5" @click="btnClick">{{ btnContext }}</LokButton>
+        <LokInput class="radius-right-none w-4/5" :type="type" :placeholder="placeholder" />
+        <LokButton class="radius-left-none w-1/5" @click="btnClick">{{ btnContext }}</LokButton>
     </div>
 </template>
 
