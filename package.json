@@ -13,7 +13,7 @@
     "@nuxtjs/svg": "^0.4.0",
     "@nuxtjs/vuetify": "^1.12.3",
     "node-sass": "^8.0.0",
-    "nuxt": "^3.5.1",
+    "nuxt": "^3.5.2",
     "sass-loader": "^13.2.1"
   },
   "dependencies": {
