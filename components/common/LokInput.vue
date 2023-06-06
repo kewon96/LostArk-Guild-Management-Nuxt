@@ -2,7 +2,6 @@
   <div class="lok-input">
     <label  class="sr-only">{{ $attrs.placeholder }}</label>
     <input
-           name="email"
            v-bind="$attrs"
            autocomplete="email" required="" :placeholder="$attrs.placeholder" />
   </div>
