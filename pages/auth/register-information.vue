@@ -24,8 +24,9 @@
 /******** Reactive Instance **********/
 
 const { email, password } = useRegister();
-const authCode = ref<string>()
-const passwordMatch = ref<string>()
+const router = useRouter();
+const authCode = ref<string>();
+const passwordMatch = ref<string>();
 
 /******** Hooks **********/
 
