@@ -1,7 +1,7 @@
 <template>
   <div class="register-search-character">
     <div class="character-area w-9/12">
-      <LokInputWrapper placeholder="캐릭터명" btn-context="검색" :btn-click="foo" />
+      <LokInputWrapper v-model="register.characterName" placeholder="캐릭터명" btn-context="검색" :btn-click="foo" />
     </div>
   </div>
 </template>
@@ -13,6 +13,7 @@
 
 /******** Instance **********/
 
+const { register } = useRegister();
 
 /******** Reactive Instance **********/
 

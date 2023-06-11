@@ -2,8 +2,8 @@
   <form action="" method="post" class="login">
     <div class="grid gap-y-5 w-9/12">
       <div class="grid gap-y-5">
-        <LokInput type="email" placeholder="이메일" name="email"/>
-        <LokInput type="password" placeholder="비밀번호" name="password"/>
+        <LokInput type="email" v-model="loginInfo.email" placeholder="이메일" name="email"/>
+        <LokInput type="password" v-model="loginInfo.password" placeholder="비밀번호" name="password"/>
       </div>
       <div class="keep-up-login">
         <LokIcon icon-name="check-outline" class="w-5 h-5"></LokIcon>
@@ -26,9 +26,14 @@
 
 /******** Instance **********/
 
+interface LoginInfo {
+  email: string,
+  password: string
+}
 
 /******** Reactive Instance **********/
 
+const loginInfo = reactive<LoginInfo>({});
 
 /******** Hooks **********/
 

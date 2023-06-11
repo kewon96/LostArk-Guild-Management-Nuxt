@@ -1,11 +1,15 @@
-const email = ref<string>();
-const password = ref<string>();
+const register = reactive<Register>({
+    email: '',
+    authCode: '',
+    password: '',
+    passwordMatch: '',
+    characterName: '',
+});
 
 export const useRegister = () => {
 
 
     return {
-        email,
-        password
+        register
     }
 }
