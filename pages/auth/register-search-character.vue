@@ -22,6 +22,7 @@ const { register } = useRegister();
 
 definePageMeta({
   layout: 'auth-area',
+  middleware: 'register'
 })
 
 

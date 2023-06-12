@@ -23,19 +23,13 @@
 /******** Reactive Instance **********/
 
 const { register } = useRegister(); // 회원가입할 때 필요한 정보
-// const registerInst = reactive<RegisterInst>({
-//   email: '',
-//   authCode: '',
-//   password: '',
-//   passwordMatch: '',
-// }); // 회원가입-기본정보
 const router = useRouter();
 
 /******** Hooks **********/
 
 definePageMeta({
   layout: 'auth-area',
-  // middleware: 'register'
+  middleware: 'register'
 })
 
 
