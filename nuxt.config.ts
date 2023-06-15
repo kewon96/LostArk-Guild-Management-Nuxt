@@ -5,6 +5,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         '@vueuse/nuxt',
+        'nuxt-lodash',
     ],
 
     devtools: {
