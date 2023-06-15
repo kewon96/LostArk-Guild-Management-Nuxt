@@ -13,7 +13,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     if(toName === fromName) return;
     
     switch (toName) {
-        case 'auth-register-search-character': moveSearchCharacter(to, from); break;
+        case 'auth-register-search-character': return navigateTo(moveToSearchCharacter(to, from));
     }
 })
 
@@ -25,14 +25,14 @@ export default defineNuxtRouteMiddleware((to, from) => {
  * @param to
  * @param from
  */
-function moveSearchCharacter(to: RouteLocationNormalized, from: RouteLocationNormalized) {
-    const { name: toName, path } = to;
-    const { name: fromName } = from;
+function moveToSearchCharacter(to: RouteLocationNormalized, from: RouteLocationNormalized): string | undefined {
+    const { register } = useRegister();
+    const { name: toName, path: toPath } = to;
+    const { name: fromName, path: fromPath } = from;
 
-    if(fromName !== 'auth-register-information') {
-        return navigateTo(path)
+    // 기본정보입력에서
+    if(fromName !== 'auth-register-information' || isEmpty<P_Register>(register)) {
+        return toPath;
     }
 
-
-    console.log(1)
 }
