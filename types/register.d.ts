@@ -4,4 +4,6 @@ type Register = {
     password: string,
     passwordMatch: string,
     characterName: string,
-}
+};
+
+type P_Register = Partial<Register>

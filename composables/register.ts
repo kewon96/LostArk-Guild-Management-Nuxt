@@ -1,10 +1,4 @@
-const register = reactive<Register>({
-    email: '',
-    authCode: '',
-    password: '',
-    passwordMatch: '',
-    characterName: '',
-});
+const register = reactive<P_Register>({});
 
 export const useRegister = () => {
 
