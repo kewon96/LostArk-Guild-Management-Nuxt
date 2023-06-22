@@ -6,4 +6,5 @@ type Register = {
     characterName: string,
 };
 
+type InfoRegister = Partial<Omit<Register, 'characterName'>>;
 type P_Register = Partial<Register>
