@@ -64,7 +64,11 @@ export default defineNuxtConfig({
     },
 
     devServer: {
-        url: "http://localhost:5050",
+        // url: "http://localhost:5050",
         port: 5050,
-    }
+    },
+
+    nitro: {
+      baseURL: 'http://localhost:5555',
+    },
 })
