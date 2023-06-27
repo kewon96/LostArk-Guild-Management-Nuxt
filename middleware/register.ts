@@ -1,4 +1,5 @@
 import {RouteRecordName} from "vue-router";
+import {useRegister} from "~/composables/register";
 
 // 해당 목록으로 이동 시 유효성검사 Pass
 const ALWAYS_APPLY_TO_ROUTE: RouteRecordName[] = ['auth-register-information'];
@@ -12,11 +13,15 @@ export default defineNuxtRouteMiddleware((to, from) => {
     const { name: fromName, path: fromPath } = from;
     
     // 현 화면에서 Reloading하는 경우 별다른거 안함
-    if(toName === fromName) return;
-    if(ALWAYS_APPLY_TO_ROUTE.includes(toName!)) return;
+    if(toName === fromName) return/* abortNavigation()*/;
+    if(ALWAYS_APPLY_TO_ROUTE.includes(toName!)) return/* abortNavigation()*/;
 
     switch (fromName) {
-        case 'auth-register-information': return navigateTo(validationRegisterInfo() ? toPath : fromPath);
+        case 'auth-register-information': {
+            if(!useRegister().successInformation()) {
+                return abortNavigation();
+            }
+        }
     }
 })
 
@@ -32,8 +37,8 @@ function validationRegisterInfo(): boolean {
     const { characterName, ...infoRegister } = register;
     const values = Object.values(infoRegister);
 
-    if(values.length === 0) return false;
-    if(values.some(value => !value)) return false;
+    if(values.length !== 4) return false;
+    return !values.some(value => !value);
 
-    return true;
+
 }

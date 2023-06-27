@@ -29,7 +29,7 @@ const router = useRouter();
 
 definePageMeta({
   layout: 'auth-area',
-  middleware: 'register',
+  // middleware: 'register',
 })
 
 
