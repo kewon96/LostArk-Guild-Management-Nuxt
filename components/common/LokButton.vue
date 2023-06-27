@@ -1,13 +1,11 @@
 <template>
-    <button v-bind="$attrs">
+    <button class="solid" v-bind="$attrs">
         <slot />
     </button>
 </template>
 
 <script setup lang="ts">
 
-// defineProps<{
-//
-// }>()
+
 
 </script>

@@ -1,10 +1,8 @@
 <template>
   <div class="lok-input">
-    <label :for="id" class="sr-only">{{ $attrs.placeholder }}</label>
-    <input :id="id"
-           name="email"
-           v-bind="$attrs"
-           autocomplete="email" required="" :placeholder="$attrs.placeholder" />
+    <input v-bind="$attrs"
+           @input="$emit('update:modelValue', $event.target.value)"
+           autocomplete="email" :placeholder="$attrs.placeholder" />
   </div>
 </template>
 
@@ -18,12 +16,13 @@
 
 /*********** Reactive Instance **************/
 
-defineProps<{
-    id: string,
-    label?: string
-}>()
+
 
 /*********** Hook **************/
+
+defineProps<{
+  modelValue?: string,
+}>()
 
 
 /*********** Function **************/

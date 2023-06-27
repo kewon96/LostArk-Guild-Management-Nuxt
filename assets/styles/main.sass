@@ -1,16 +1,21 @@
-@tailwind base
 @tailwind components
 @tailwind utilities
 //@tailwind form
-//@tailwind reset
+//@tailwind reset.sass
+
+@import "./reset"
 
 @import "./mixins/mixins"
-@import "./commons/a"
+@import "./commons/lok-link"
 @import "./commons/lok-button"
 @import "./commons/lok-input"
+
+@import "./util-class/radius"
 
 @layer components
   .card
     @apply p-3 rounded-md bg-white shadow-md h-full
 
+body
+  background-color: $body-background
 

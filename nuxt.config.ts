@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
-        '@nuxt/devtools',
+        '@vueuse/nuxt',
+        'nuxt-lodash',
     ],
 
     devtools: {
@@ -15,6 +16,7 @@ export default defineNuxtConfig({
         // ...other options
     },
 
+    // @ts-ignore
     buildModules: [
         '@nuxtjs/style-resources',
         '@nuxtjs/svg',
@@ -62,7 +64,11 @@ export default defineNuxtConfig({
     },
 
     devServer: {
-        url: "http://localhost:5050",
+        // url: "http://localhost:5050",
         port: 5050,
-    }
+    },
+
+    nitro: {
+      baseURL: 'http://localhost:5555',
+    },
 })
