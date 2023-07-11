@@ -1,8 +1,12 @@
 <template>
   <div class="lok-input">
     <input v-bind="$attrs"
+           :placeholder="$attrs.placeholder" />
+    <!--
            @input="$emit('update:modelValue', $event.target.value)"
-           autocomplete="email" :placeholder="$attrs.placeholder" />
+           autocomplete="email"
+    -->
+    <span>{{ errorMessage }}</span>
   </div>
 </template>
 
@@ -14,15 +18,22 @@
 /*********** Normal Instance **************/
 
 
-/*********** Reactive Instance **************/
-
-
-
 /*********** Hook **************/
 
-defineProps<{
+const props = withDefaults(defineProps<{
+  name: string,
+  type: string,
   modelValue?: string,
-}>()
+}>(), {
+  name: 'text',
+  type: 'text',
+})
+
+
+/*********** Reactive Instance **************/
+
+const { value, errorMessage } = useField(() => props.name);
+
 
 
 /*********** Function **************/
