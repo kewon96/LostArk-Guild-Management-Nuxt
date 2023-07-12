@@ -1,14 +1,19 @@
 const register = reactive<P_Register>({});
 
+
 export const useRegister = () => {
 
 
 
     return {
         register,
-        successInformation,
+        // validator,
     }
 }
+
+// const validator = () => ({
+//     email: yup.string().email().required()
+// })
 
 const successInformation = (): boolean => {
     const { characterName, ...infoRegister } = register;

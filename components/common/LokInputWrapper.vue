@@ -20,10 +20,10 @@
 
 withDefaults(defineProps<{
   modelValue?: string,
-  type?: string,
+  type: string,
   placeholder: string,
   btnContext: string,
-  btnClick: Function
+  btnClick: Function,
 }>(), {
   type: 'text'
 });

@@ -1,7 +1,7 @@
 <template>
   <div class="register-information">
     <div class="information-area w-9/12">
-      <LokInputWrapper type="email" v-model="register.email" :validate="" placeholder="이메일" btn-context="전송" :btn-click="foo" />
+      <LokInputWrapper type="email" v-model="register.email" placeholder="이메일" btn-context="전송" :btn-click="foo" />
       <LokInputWrapper type="text" v-model="register.authCode" placeholder="인증번호" btn-context="확인" :btn-click="foo" />
       <LokInput type="password" v-model="register.password" placeholder="비밀번호" name="password"/>
       <LokInput type="password" v-model="register.passwordMatch" placeholder="비밀번호 확인" name="password"/>

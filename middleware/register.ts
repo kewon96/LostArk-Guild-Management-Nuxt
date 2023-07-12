@@ -1,5 +1,5 @@
 import {RouteRecordName} from "vue-router";
-import {useRegister} from "~/composables/register";
+import {useRegister} from "~/composables/register/useRegister";
 
 // 해당 목록으로 이동 시 유효성검사 Pass
 const ALWAYS_APPLY_TO_ROUTE: RouteRecordName[] = ['auth-register-information'];
@@ -16,13 +16,13 @@ export default defineNuxtRouteMiddleware((to, from) => {
     if(toName === fromName) return/* abortNavigation()*/;
     if(ALWAYS_APPLY_TO_ROUTE.includes(toName!)) return/* abortNavigation()*/;
 
-    switch (fromName) {
-        case 'auth-register-information': {
-            if(!useRegister().successInformation()) {
-                return abortNavigation();
-            }
-        }
-    }
+    // switch (fromName) {
+    //     case 'auth-register-information': {
+    //         if(!useRegister().successInformation()) {
+    //             return abortNavigation();
+    //         }
+    //     }
+    // }
 })
 
 /**

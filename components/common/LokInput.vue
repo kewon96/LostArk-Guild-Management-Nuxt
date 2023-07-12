@@ -6,11 +6,11 @@
            @input="$emit('update:modelValue', $event.target.value)"
            autocomplete="email"
     -->
-    <span>{{ errorMessage }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
+
 
 /*********** Type & Interface **************/
 
@@ -21,18 +21,16 @@
 /*********** Hook **************/
 
 const props = withDefaults(defineProps<{
-  name: string,
   type: string,
   modelValue?: string,
 }>(), {
-  name: 'text',
   type: 'text',
 })
 
 
 /*********** Reactive Instance **************/
 
-const { value, errorMessage } = useField(() => props.name);
+// const { value, errorMessage } = useField('email', props.validate);
 
 
 
